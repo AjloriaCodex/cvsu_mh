@@ -5,14 +5,22 @@
     <title>Quiz</title>
 </head>
 <body>
-    <h1>Simple Math Quiz</h1>
-    <form method="post">
+    <h1>BS in Sports Science Try Quiz</h1>
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>
     </form>
-    {% if feedback %}
-        <p>{{ feedback }}</p>
+    {% if feedback_q1 %}
+        <p>Question 1: {{ feedback_q1 }}</p>
+    {% endif %}
+
+    {% if feedback_q2 %}
+        <p>Question 2: {{ feedback_q2 }}</p>    
+    {% endif %}
+
+    {% if feedback_q3 %}
+        <p>Question 3: {{ feedback_q3 }}</p>    
     {% endif %}
 </body>
 </html>
